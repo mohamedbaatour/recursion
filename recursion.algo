@@ -1,0 +1,15 @@
+ALGORITHM recursion.algo
+VAR
+    word: String
+
+BEGIN
+    IF LENGTH(word) <= 1 THEN
+        RETURN True 
+    END_IF
+
+    IF FIRST_CHAR(word) = LAST_CHAR(word) THEN
+        RETURN IsPalindrome(SUBSTRING(word, 2, LENGTH(word) - 2))
+    ELSE
+        RETURN False  
+    END_IF
+END
